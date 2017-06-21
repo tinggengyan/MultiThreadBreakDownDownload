@@ -1,4 +1,4 @@
-package com.steve.main.com.steve.player;
+package com.steve.player;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -34,7 +34,9 @@ public class Player implements OnBufferingUpdateListener, OnCompletionListener, 
     TimerTask timerTask = new TimerTask() {
         @Override
         public void run() {
-            if (mediaPlayer == null) return;
+            if (mediaPlayer == null) {
+                return;
+            }
             if (mediaPlayer.isPlaying() && seekBar.isPressed() == false) {
                 handler.sendEmptyMessage(0); // 发送消息
             }
@@ -117,7 +119,7 @@ public class Player implements OnBufferingUpdateListener, OnCompletionListener, 
     public void onBufferingUpdate(MediaPlayer mp, int percent) {
         seekBar.setSecondaryProgress(percent);
         int currentProgress =
-                seekBar.getMax() * mediaPlayer.getCurrentPosition() / mediaPlayer.getDuration();
+            seekBar.getMax() * mediaPlayer.getCurrentPosition() / mediaPlayer.getDuration();
         Log.e(currentProgress + "% play", percent + " buffer");
     }
 

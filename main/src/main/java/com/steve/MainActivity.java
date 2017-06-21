@@ -1,4 +1,4 @@
-package com.steve.main.com.steve;
+package com.steve;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,11 +7,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.steve.main.com.steve.download.DownloadActivity;
-import com.steve.main.com.steve.player.PlayerActivity;
-import com.wwj.download.R;
+import com.steve.download.DownloadActivity;
+import com.steve.download.R;
+import com.steve.player.PlayerActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
+
     // Content View Elements
     private Button mButton_download;
     private Button mButton_playonline;

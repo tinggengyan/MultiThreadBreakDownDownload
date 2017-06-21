@@ -1,4 +1,4 @@
-package com.steve.main.com.steve.player;
+package com.steve.player;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,9 +8,10 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-import com.wwj.download.R;
+import com.steve.download.R;
 
 public class PlayerActivity extends Activity {
+
     private Player player;
     private SeekBar musicProgress;
     private Button playBtn;
@@ -55,6 +56,7 @@ public class PlayerActivity extends Activity {
     }
 
     class SeekBarChangeEvent implements OnSeekBarChangeListener {
+
         int progress;
 
         @Override
